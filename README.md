@@ -22,7 +22,10 @@ Each particle $i$ has a position $\mathbf{r}_i$, velocity $\mathbf{v}_i$, mass $
 The latter is treated as a degree of freedom for the system so that particles can fluctuate in size according to interactions with the externally applied field $\delta \mu (\sigma)$.
 The Hamiltonian for this system can then be written as:
 
-$$H = \sum_i \left[\frac{\mathbf{p}_i^2}{2m} + \frac{\wp_i^2}{2M} + V(R_i)\right] + \sum_{i\lt j}U_{ij}(\mathbf{r}_i, \mathbf{r}_j, R_i,R_j)],$$
+
+$$H=\sum_i\left[\frac{\mathbf{p}_i^2}{2m} + \frac{\wp_i^2}{2M} + V(R_i)\right]$$
+
+$$+\sum_{i\lt j}U_{ij}(\mathbf{r}_i, \mathbf{r}_j, R_i,R_j),$$
 
 where $\mathbf{p}_i$ is the translational momentum of particle $i$, $m$ is the (translational) particle mass, $m$ is the (translational) particle mass, $\wp_i$ is the momentum associated with its radius $R_i$, $M$ is the mass associated with the radius of a particle, $V(R_i) = -\delta\mu\left(\sigma_i=2R_i\right)$ is the external field controlling the particle size, and $U_{ij}$ represents the pair interaction (which is either 0 or $+\infty$ for hard spheres).
 
