@@ -21,20 +21,20 @@ We simulate three-dimensional systems of $N$ hard spheres in the semi-grand cano
 Each particle $i$ has a position $\mathbf{r}_i$, velocity $\mathbf{v}_i$, mass $m$ (set equal for all particles), diameter $\sigma_i$ and radius $R_i = \sigma_i / 2$.
 The latter is treated as a degree of freedom for the system so that particles can fluctuate in size according to interactions with the externally applied field $\delta \mu (\sigma)$.
 The Hamiltonian for this system can then be written as:
+```math
+H=\sum_i\left[\frac{\mathbf{p}_i^2}{2m} + \frac{\wp_i^2}{2M} + V(R_i)\right]
++\sum_{i\lt j}U_{ij}(\mathbf{r}_i, \mathbf{r}_j, R_i,R_j),
+```
+where $\mathbf{p}_i$ is the translational momentum of particle i, $m$ is the (translational) particle mass, $\wp_i$ is the momentum associated with its radius $R_i$, and $M$ is the associated mass.
 
-
-$$H=\sum_i\left[\frac{\mathbf{p}_i^2}{2m} + \frac{\wp_i^2}{2M} + V(R_i)\right]$$
-
-$$+\sum_{i\lt j}U_{ij}(\mathbf{r}_i, \mathbf{r}_j, R_i,R_j),$$
-
-where $\mathbf{p}_i$ is the translational momentum of particle $i$, $m$ is the (translational) particle mass, $m$ is the (translational) particle mass, $\wp_i$ is the momentum associated with its radius $R_i$, $M$ is the mass associated with the radius of a particle, $V(R_i) = -\delta\mu\left(\sigma_i=2R_i\right)$ is the external field controlling the particle size, and $U_{ij}$ represents the pair interaction (which is either 0 or $+\infty$ for hard spheres).
+Additionally, $V(R_i) = -\delta\mu\left(\sigma_i=2R_i\right)$ is the external field controlling the particle size, and $U_{ij}$ represents the pair interaction (which is either 0 or $+\infty$ for hard spheres).
 
 Interactions with the continuous field $V(R_i)$ are handled with EDMC, see [this reference](https://doi.org/10.1103/PhysRevE.85.026703) for details.
 
 <!-- Initialization of polydisperse systems with a Gaussian distribution of sizes is achieved deterministically using the inverse cummulative probability distribution function.  -->
 
 The simulation code operates in the following units:
--  Lengths are measured in units of the mean particle size $\bar{\sigma}$.
+-  Lengths are measured in units of an arbitrary particle diameter $\bar{\sigma}$, which we generally choose to be the mean particle size of the fluid phase that $\delta \mu(\sigma)$ is taken from.
 -  Mass is measured in units of the particle mass $m$.
 -  Time is measured in units of $\tau = \sqrt{\beta m \bar{\sigma}^2}$. Here, $\beta = 1/k_B T$ with $k_B$ Boltzmann's constant.
 -  Energy is measured in units of $k_B T$.
