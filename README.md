@@ -29,7 +29,8 @@ where $\mathbf{p}_i$ is the translational momentum of particle i, $m$ is the (tr
 
 Additionally, $V(R_i) = -\delta\mu\left(\sigma_i=2R_i\right)$ is the external field controlling the particle size, and $U_{ij}$ represents the pair interaction (which is either 0 or $+\infty$ for hard spheres).
 
-Interactions with the continuous field $V(R_i)$ are handled with EDMC, see [this reference](https://doi.org/10.1103/PhysRevE.85.026703) for details.
+Interactions with the continuous field $V(R_i)$ are handled with EDMC, see [this reference](https://doi.org/10.1103/PhysRevE.85.026703) for details. Note that the grand-canonical simulation assumes that the field $V(R_i)$ has the form of a cubic polynomial, with the coefficients set as command-line arguments (see ``md -h``).
+
 
 <!-- Initialization of polydisperse systems with a Gaussian distribution of sizes is achieved deterministically using the inverse cummulative probability distribution function.  -->
 
