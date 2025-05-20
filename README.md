@@ -5,7 +5,7 @@ This is an event-driven Monte Carlo (EDMC) code to perform simulations of polydi
 This project is adapted from a previous implementation of EDMC to deal with monodisperse particles interacting with the WCA potential (see [this release](https://github.com/FSmallenburg/EDMC) and [this reference](https://doi.org/10.1063/5.0209178) for more details).
 For random number generation, it employs an implementation of Xoshiro256+ (see [this reference](https://doi.org/10.1145/3460772) and [this documentation](https://prng.di.unimi.it/)).
 
-This code is published alongside the paper *Freezing line of polydisperse hard spheres viar direct coexistence simulations*.
+This code is published alongside the paper *Freezing line of polydisperse hard spheres via direct coexistence simulations*.
 
 
 ## Building and running
